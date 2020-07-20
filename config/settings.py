@@ -39,7 +39,15 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    "core.apps.CoreConfig",
+    "conversations.apps.ConversationsConfig",
+    "lectures.apps.LecturesConfig",
+    "lists.apps.ListsConfig",
+    "reservations.apps.ReservationsConfig",
+    "reviews.apps.ReviewsConfig",
+    "users.apps.UsersConfig",
+]
 
 THIRD_PARTY_APPS = []
 
@@ -118,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = "/static/"
+
+
+AUTH_USER_MODEL = "users.User"
